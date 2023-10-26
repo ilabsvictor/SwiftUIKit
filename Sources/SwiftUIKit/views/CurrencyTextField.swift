@@ -91,6 +91,7 @@ public struct CurrencyTextField: UIViewRepresentable {
         
         let textField = UITextField()
         textField.delegate = context.coordinator
+        textField.adjustsFontForContentSizeCategory = true
         
         textField.addTarget(context.coordinator, action: #selector(context.coordinator.textFieldEditingDidBegin(_:)), for: .editingDidBegin)
         textField.addTarget(context.coordinator, action: #selector(context.coordinator.textFieldEditingDidEnd(_:)), for: .editingDidEnd)
